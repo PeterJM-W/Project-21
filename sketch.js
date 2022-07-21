@@ -24,7 +24,7 @@ function setup(){
 //create the canvas and adjust the window sizes to suit the device
  createCanvas(windowWidth, windowHeight)
 
-path=createSprite(width/2,200);
+path=createSprite(windowWidth/2,200);
 path.addImage(pathImg);
 path.velocityY = 4;
 
@@ -43,8 +43,7 @@ swordGroup=new Group();
 }
 
 function draw() {
-
-  console.log(path.width/2)
+  
   if(gameState===PLAY){
   background(0);
   if(keyDown(RIGHT_ARROW)){
@@ -123,7 +122,7 @@ function createCash() {
     cash.addImage(cashImg);0
   cash.scale=0.12;
   cash.velocityY = 5;
-  cash.lifetime = windowHeight/2;
+  cash.lifetime = windowHeight;
   cashG.add(cash);
   }
 }
@@ -136,7 +135,7 @@ function createDiamonds() {
     diamonds.addImage(diamondsImg);
   diamonds.scale=0.03;
   diamonds.velocityY = 5;
-  diamonds.lifetime = windowHeight/2;
+  diamonds.lifetime = windowHeight;
   diamondsG.add(diamonds);
 }
 }
@@ -149,7 +148,7 @@ function createJwellery() {
     jwellery.addImage(jwelleryImg);
   jwellery.scale=0.13;
   jwellery.velocityY = 5;
-  jwellery.lifetime = windowHeight/2;
+  jwellery.lifetime = windowHeight;
   jwelleryG.add(jwellery);
   }
 }
@@ -162,7 +161,7 @@ function createSword(){
     sword.addImage(swordImg);
   sword.scale=0.1;
   sword.velocityY = 4;
-  sword.lifetime = windowHeight/2;
+  sword.lifetime = windowHeight;
   swordGroup.add(sword);
   }
 }
